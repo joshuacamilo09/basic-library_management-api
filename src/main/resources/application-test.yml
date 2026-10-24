@@ -4,11 +4,6 @@ spring:
       on-profile: test
 
   datasource:
-    url:
-    username:
-    password:
-
-  jpa:
-    hibernate:
-      ddl-auto: create-drop
-    show-sql: false
+    url: ${TEST_DB_URL:jdbc:postgresql://localhost:5432/library_test}
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:postgres}

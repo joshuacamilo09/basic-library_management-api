@@ -49,13 +49,13 @@ public class LibraryController {
         return "Book with Id " + Id + " deleted with success.";
     }
 
-    @GetMapping("/loan/{Id}")
+    @PatchMapping("/{Id}/loan")
     public String loanBook(@PathVariable Long Id){
         service.loanBook(Id);
         return "Book " + Id + " was loaned with success";
     }
 
-    @GetMapping("/return/{Id}")
+    @PatchMapping("/{Id}/return")
     public String returnBook(@PathVariable Long Id){
         service.returnBook(Id);
         return "Book " + Id + " was returned with success";
